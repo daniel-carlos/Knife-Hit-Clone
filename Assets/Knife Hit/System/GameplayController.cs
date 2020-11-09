@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameplayController : MonoBehaviour
 {
+    private FSM fsm;
+
     [Header("Player Control")]
     public bool playerControl = false;
     private bool initialized = false;
@@ -21,7 +24,7 @@ public class GameplayController : MonoBehaviour
     private int currentLevel = 0;
 
     [Header("Knife")]
-    
+
     public float throwSpeed = 5f;
     private Knife currentKnife;
     public Knife knifePrefab;
@@ -31,31 +34,48 @@ public class GameplayController : MonoBehaviour
     [Header("Log Object")]
     public TargetLog currentLog;
 
+
     public void ThrowCurrentKnife()
     {
         if (currentKnife == null) return;
 
-        currentKnife.transform.parent = null;
-        currentKnife.ThrowKnife(throwSpeed, knifeSpawnpoint);
-        if (knifesContainer.childCount > 0)
-        {
-            currentKnife = knifesContainer.GetChild(0).GetComponent<Knife>();
-        }
-        else
-        {
-            currentKnife = null;
-        }
+        // currentKnife.transform.parent = null;
+        currentKnife.ThrowKnife(throwSpeed, knifeSpawnpoint, this);
+        currentKnife = null;
+
+        fsm.currentState.SendMessage("OnThrowKnife");
+    }
+
+    //Return false if has no level to run in
+    public bool NextLevel()
+    {
+        currentLevel++;
+        return currentLevel < allLevels.Count;
+
+    }
+
+    public void OnKnifeHitLog(Knife knife)
+    {
+        fsm.currentState.SendMessage("OnKnifeHitLog");
+    }
+
+    public void OnDefeat()
+    {
+        fsm.currentState.SendMessage("OnDefeat");
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        fsm = GetComponent<FSM>();
     }
 
     public GameplayLevel CurrentLevel()
     {
-        return allLevels[currentLevel];
+        if (currentLevel < allLevels.Count)
+            return allLevels[currentLevel];
+        else
+            return null;
     }
 
     // Update is called once per frame
@@ -93,11 +113,11 @@ public class GameplayController : MonoBehaviour
     {
         GameplayLevel level = allLevels[currentLevel];
         currentLog = Instantiate(level.levelLog);
+        currentLog.gameplayLevel = level;
         for (int i = 0; i < level.startingAmmo; i++)
         {
             KnifeSpawn();
         }
-        DrawFirstKnife();
     }
 
     public void FillLogWithStartingKnifes()
@@ -106,8 +126,15 @@ public class GameplayController : MonoBehaviour
         if (currentLog != null)
         {
             currentLog.SetupStartingKnifes(level.startingKnifes);
-        }else{
+        }
+        else
+        {
             Debug.LogWarning("Gameplay Controller has not a currentLog");
         }
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("Gameplay");
     }
 }

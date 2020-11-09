@@ -12,10 +12,13 @@ public class FSM : MonoBehaviour {
         if(currentState != null){
             currentState.StateExit();
         }
+
         currentState = newState;
-        if(newState != null){
-            newState.StateEnter();
-            newState.fsm = this;
+        if(currentState != null){
+            currentState.fsm = this;
+            currentState.StateEnter();
+        }else{
+            Debug.LogWarning("You're trying to change fsm to an empty state.");
         }
     }
 

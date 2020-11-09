@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class TargetLog : MonoBehaviour
 {
+    private bool rotate = true;
+
     [Header("Starting Configuration")]
     public float logRadius;
 
-    [Header("Log Rotation")]
-    public float angularSpeed = 45f;
-    public float angularSpeedSmooth = 5f;
-
-    public AnimationCurve angularSpeedCurve;
-
+    [Header("Level")]
+    public GameplayLevel gameplayLevel;
 
     [Header("Physics")]
     public Rigidbody2D rb2;
@@ -23,6 +21,7 @@ public class TargetLog : MonoBehaviour
     [Header("FX")]
     public GameObject sparkPrefab;
     public float sparkLifetime = 2f;
+    public BrokenLog brokenLogPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -47,8 +46,12 @@ public class TargetLog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // TODO: apagar isso
-        rb2.angularVelocity = angularSpeed * angularSpeedCurve.Evaluate(Time.time / angularSpeedSmooth % 1f);
+        if (rotate)
+        {
+            rb2.angularVelocity = gameplayLevel.angularSpeed * gameplayLevel.angularSpeedCurve.Evaluate(Time.time / gameplayLevel.angularSpeedSmooth % 1f);
+        }else{
+            rb2.angularVelocity = 0f;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -72,5 +75,16 @@ public class TargetLog : MonoBehaviour
                 GameObject.Destroy(spark, sparkLifetime);
             }
         }
+    }
+
+    public void BreakLog()
+    {
+        BrokenLog brokenLog = Instantiate(brokenLogPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+
+    public void StopRotating()
+    {
+        rotate = false;
     }
 }

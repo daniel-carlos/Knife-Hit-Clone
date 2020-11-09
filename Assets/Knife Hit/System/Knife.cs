@@ -10,20 +10,19 @@ public class Knife : MonoBehaviour
     public bool sleep = true;
     public bool dead = false;
 
+    private GameplayController gameplay;
+    
+
     [ContextMenu("Throw")]
-    public void ThrowKnife(float throwSpeed)
+    public void ThrowKnife(float throwSpeed, Transform spawnpoint, GameplayController gameplay = null)
     {
         if (dead) return;
-        rb2.gravityScale = 0f;
-        rb2.velocity = throwSpeed * Vector2.up;
-    }
-    public void ThrowKnife(float throwSpeed, Transform spawnpoint)
-    {
-        if (dead) return;
+        transform.parent = null;
         sleep = false;
         this.transform.position = spawnpoint.position;
         rb2.gravityScale = 0f;
         rb2.velocity = throwSpeed * Vector2.up;
+        this.gameplay = gameplay;
     }
 
     // Start is called before the first frame update
@@ -47,17 +46,10 @@ public class Knife : MonoBehaviour
     {
         if (dead) return;
         Debug.Log($"I hitted the log!", this);
+        if(gameplay != null){
+            gameplay.OnKnifeHitLog(this);
+        }
     }
-
-    // private void OnCollisionEnter2D(Collision2D other)
-    // {
-    //     if (other.gameObject.tag == "StabbedKnife")
-    //     {
-    //         Debug.Log($"I hitted another knife!", other.gameObject);
-    //         dead = true;
-    //         rb2.gravityScale = 1f;
-    //     }
-    // }
 
     void KillKnife()
     {
@@ -74,6 +66,7 @@ public class Knife : MonoBehaviour
         {
             Debug.Log($"I hitted another knife!", other.gameObject);
             KillKnife();
+            gameplay.OnDefeat();
         }
     }
 }
