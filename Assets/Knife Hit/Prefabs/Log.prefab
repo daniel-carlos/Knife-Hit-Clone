@@ -67,7 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f557bd409faf82f4ab6521d81ec19154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logRadius: 3.21
+  logRadius: 2.86
+  fruitRadius: 2.33
   gameplayLevel:
     levelLog: {fileID: 0}
     levelName: 
@@ -100,8 +101,10 @@ MonoBehaviour:
       m_RotationOrder: 4
     startingAmmo: 5
     startingKnifes: []
+    startingFruits: []
   rb2: {fileID: 3787283425103983341}
   stabbedKnifePrefab: {fileID: 2714595111874835615, guid: d9bc9872f26774b4b898ea0fdc544b7f, type: 3}
+  fruitPrefab: {fileID: 3885924112455974751, guid: 99c8469e8d7bbe24491468995d1735c1, type: 3}
   sparkPrefab: {fileID: 3469462343358912201, guid: be056003fcea2534982911026ab436dc, type: 3}
   sparkLifetime: 2
   brokenLogPrefab: {fileID: 5414082829107061091, guid: 78eb2d62040df114c98af0da8ae6e1c0, type: 3}

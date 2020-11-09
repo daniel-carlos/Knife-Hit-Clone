@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class TargetLog : MonoBehaviour
 
     [Header("Starting Configuration")]
     public float logRadius;
+    public float fruitRadius;
 
     [Header("Level")]
     public GameplayLevel gameplayLevel;
@@ -17,6 +19,7 @@ public class TargetLog : MonoBehaviour
 
     [Header("Containers")]
     public GameObject stabbedKnifePrefab;
+    public GameObject fruitPrefab;
 
     [Header("FX")]
     public GameObject sparkPrefab;
@@ -49,7 +52,9 @@ public class TargetLog : MonoBehaviour
         if (rotate)
         {
             rb2.angularVelocity = gameplayLevel.angularSpeed * gameplayLevel.angularSpeedCurve.Evaluate(Time.time / gameplayLevel.angularSpeedSmooth % 1f);
-        }else{
+        }
+        else
+        {
             rb2.angularVelocity = 0f;
         }
     }
@@ -86,5 +91,17 @@ public class TargetLog : MonoBehaviour
     public void StopRotating()
     {
         rotate = false;
+    }
+
+    internal void SetupStartingFruits(float[] startingFruits)
+    {
+        for (int i = 0; i < startingFruits.Length; i++)
+        {
+            GameObject fruit = Instantiate(fruitPrefab,
+                transform.position + Vector3.down * fruitRadius,
+                Quaternion.identity, transform);
+            float angle = startingFruits[i];
+            fruit.transform.RotateAround(transform.position, Vector3.forward, angle);
+        }
     }
 }

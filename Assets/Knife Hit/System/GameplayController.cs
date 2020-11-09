@@ -23,6 +23,7 @@ public class GameplayController : MonoBehaviour
     public List<GameplayLevel> allLevels;
     private int currentLevel = 0;
     private int currentLevelScore = 0; //Escores adqiridos no level atual
+    private int fruits = 0; //Escores adqiridos no level atual
     private int totalScore = 0; //Total de score acumulado de todos os levels
     private int levelTargetScore = 0; //score alvo para terminar o level
 
@@ -39,6 +40,7 @@ public class GameplayController : MonoBehaviour
     public TargetLog currentLog;
 
     public int TotalScore { get => totalScore; set => totalScore = value; }
+    public int Fruits { get => fruits; set => fruits = value; }
 
     public void ThrowCurrentKnife()
     {
@@ -65,7 +67,8 @@ public class GameplayController : MonoBehaviour
         currentLevelScore++;
         fsm.currentState.SendMessage("OnKnifeHitLog");
 
-        if(currentLevelScore == levelTargetScore){
+        if (currentLevelScore == levelTargetScore)
+        {
             fsm.currentState.SendMessage("OnLevelCleared");
         }
     }
@@ -79,6 +82,7 @@ public class GameplayController : MonoBehaviour
     void Start()
     {
         fsm = GetComponent<FSM>();
+        Fruits = PlayerPrefs.GetInt("fruits");
     }
 
     public GameplayLevel CurrentLevel()
@@ -133,12 +137,19 @@ public class GameplayController : MonoBehaviour
         }
     }
 
+    public void CollectFruit(int value)
+    {
+        Fruits += value;
+        PlayerPrefs.SetInt("fruits", Fruits);
+    }
+
     public void FillLogWithStartingKnifes()
     {
         GameplayLevel level = allLevels[currentLevel];
         if (currentLog != null)
         {
             currentLog.SetupStartingKnifes(level.startingKnifes);
+            currentLog.SetupStartingFruits(level.startingFruits);
         }
         else
         {
