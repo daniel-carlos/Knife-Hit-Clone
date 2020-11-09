@@ -25,11 +25,15 @@ public class State_WaitThrow : FSMState
     //Called by GameplayController via SendMessage
     public void OnKnifeHitLog()
     {
-        if (gameplay.knifesContainer.childCount == 0)
-        {
-            fsm.ChangeState(victoryState);
-        }
+       
     }
+    
+    public void OnLevelCleared()
+    {
+       fsm.ChangeState(victoryState);
+    }
+
+
 
     public override void StateExecute()
     {

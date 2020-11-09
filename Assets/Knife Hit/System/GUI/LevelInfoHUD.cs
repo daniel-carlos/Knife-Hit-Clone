@@ -8,6 +8,7 @@ public class LevelInfoHUD : MonoBehaviour
 {
     public GameplayController gameplay;
     public TMP_Text levelTitle;
+    public TMP_Text totalScore;
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +19,11 @@ public class LevelInfoHUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameplay.GetInitOk())
+        if (gameplay)
         {
             levelTitle.gameObject.SetActive(true);
             levelTitle.text = gameplay.CurrentLevel().levelName;
+            totalScore.text = gameplay.TotalScore.ToString();
         }
         else
         {

@@ -22,6 +22,10 @@ public class GameplayController : MonoBehaviour
     [Header("Level")]
     public List<GameplayLevel> allLevels;
     private int currentLevel = 0;
+    private int currentLevelScore = 0; //Escores adqiridos no level atual
+    private int totalScore = 0; //Total de score acumulado de todos os levels
+    private int levelTargetScore = 0; //score alvo para terminar o level
+
 
     [Header("Knife")]
 
@@ -34,6 +38,7 @@ public class GameplayController : MonoBehaviour
     [Header("Log Object")]
     public TargetLog currentLog;
 
+    public int TotalScore { get => totalScore; set => totalScore = value; }
 
     public void ThrowCurrentKnife()
     {
@@ -56,7 +61,13 @@ public class GameplayController : MonoBehaviour
 
     public void OnKnifeHitLog(Knife knife)
     {
+        TotalScore++;
+        currentLevelScore++;
         fsm.currentState.SendMessage("OnKnifeHitLog");
+
+        if(currentLevelScore == levelTargetScore){
+            fsm.currentState.SendMessage("OnLevelCleared");
+        }
     }
 
     public void OnDefeat()
@@ -111,7 +122,9 @@ public class GameplayController : MonoBehaviour
 
     public void LoadCurrentLevel()
     {
+        currentLevelScore = 0;
         GameplayLevel level = allLevels[currentLevel];
+        levelTargetScore = level.startingAmmo;
         currentLog = Instantiate(level.levelLog);
         currentLog.gameplayLevel = level;
         for (int i = 0; i < level.startingAmmo; i++)

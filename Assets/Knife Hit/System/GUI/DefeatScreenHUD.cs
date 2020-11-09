@@ -21,5 +21,6 @@ public class DefeatScreenHUD : MonoBehaviour
     void Update()
     {
         levelName.text = gameplay.CurrentLevel().levelName;
+        score.text = gameplay.TotalScore.ToString();
     }
 }
