@@ -32,7 +32,7 @@ public class GameplayController : MonoBehaviour
     void Update()
     {
         //TODO: teste. aoague isso pelo amor de Deus
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             ThrowCurrentKnife();
         }
