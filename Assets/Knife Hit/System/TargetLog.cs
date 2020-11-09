@@ -5,7 +5,6 @@ using UnityEngine;
 public class TargetLog : MonoBehaviour
 {
     [Header("Starting Configuration")]
-    public float[] startingKnifes;
     public float logRadius;
 
     [Header("Log Rotation")]
@@ -30,6 +29,11 @@ public class TargetLog : MonoBehaviour
     {
         if (rb2 == null) rb2 = GetComponent<Rigidbody2D>();
 
+
+    }
+
+    public void SetupStartingKnifes(float[] startingKnifes)
+    {
         for (int i = 0; i < startingKnifes.Length; i++)
         {
             GameObject startingStabbed = Instantiate(stabbedKnifePrefab,

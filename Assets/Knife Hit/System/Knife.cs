@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Knife : MonoBehaviour
 {
-    public float throwSpeed = 5f;
     public Rigidbody2D rb2;
     public Collider2D mainCollider;
 
@@ -12,13 +11,13 @@ public class Knife : MonoBehaviour
     public bool dead = false;
 
     [ContextMenu("Throw")]
-    public void ThrowKnife()
+    public void ThrowKnife(float throwSpeed)
     {
         if (dead) return;
         rb2.gravityScale = 0f;
         rb2.velocity = throwSpeed * Vector2.up;
     }
-    public void ThrowKnife(Transform spawnpoint)
+    public void ThrowKnife(float throwSpeed, Transform spawnpoint)
     {
         if (dead) return;
         sleep = false;
@@ -41,7 +40,7 @@ public class Knife : MonoBehaviour
             rb2.velocity = Vector2.zero;
             rb2.angularVelocity = 0f;
         }
-        mainCollider.enabled = !sleep;
+        mainCollider.enabled = !sleep && !dead;
     }
 
     void OnHitLog()
@@ -60,15 +59,21 @@ public class Knife : MonoBehaviour
     //     }
     // }
 
+    void KillKnife()
+    {
+        dead = true;
+        rb2.gravityScale = 1f;
+        rb2.velocity = Vector2.down + Vector2.right * Random.Range(-1f, 1f);
+        rb2.angularVelocity = 360f;
+        Debug.Log(GetComponent<Collider2D>());
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "StabbedKnife")
         {
             Debug.Log($"I hitted another knife!", other.gameObject);
-            dead = true;
-            rb2.gravityScale = 1f;
-            rb2.velocity = Vector2.down + Vector2.right * Random.Range(-1f,1f);
-            rb2.angularVelocity = 360f;
+            KillKnife();
         }
     }
 }

@@ -12,17 +12,20 @@ public class AmmoHUD : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startAmmo = gc.knifesContainer.childCount;
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentAmmo = gc.knifesContainer.childCount;
-        for (int i = 0; i < transform.childCount; i++)
+        if (gc.GetInitOk())
         {
-            transform.GetChild(i).gameObject.SetActive(i < startAmmo);
-            transform.GetChild(i).GetComponent<Image>().color = startAmmo - currentAmmo > i ? Color.black : Color.white;
+            startAmmo = gc.CurrentLevel().startingAmmo;
+            currentAmmo = gc.knifesContainer.childCount;
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(i < startAmmo);
+                transform.GetChild(i).GetComponent<Image>().color = startAmmo - currentAmmo > i ? Color.black : Color.white;
+            }
         }
     }
 }
