@@ -4559,7 +4559,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     startingAmmo: 5
-    startingKnifes: 0
+    startingKnifes: 1
   - levelLog: {fileID: 5220934991356661282, guid: c41e6633a0e98b345999dfd71baa2b84, type: 3}
     levelName: Level 2
     levelNumber: 2
@@ -4864,6 +4864,7 @@ MonoBehaviour:
   knifeSpawnpoint: {fileID: 627694108}
   knifesContainer: {fileID: 1314238040}
   currentLog: {fileID: 0}
+  throwCooldownTime: 0.1
 --- !u!114 &1900907353
 MonoBehaviour:
   m_ObjectHideFlags: 0

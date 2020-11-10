@@ -115,6 +115,12 @@ public class GameplayController : MonoBehaviour
                 ThrowCurrentKnife();
             }
         }
+
+        //CHEAT
+        if(Input.GetKeyDown(KeyCode.P)){
+            Fruits += Random.Range(1,20);
+            PlayerPrefs.SetInt("fruits", Fruits);
+        }
     }
 
     public void DrawFirstKnife()
@@ -176,4 +182,6 @@ public class GameplayController : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    
 }

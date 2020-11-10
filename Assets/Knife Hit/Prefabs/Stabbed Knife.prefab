@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &755488988958961504
 Transform:
   m_ObjectHideFlags: 0
@@ -92,6 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5223356209986548770}
   - component: {fileID: 8372199478145114677}
+  - component: {fileID: 4150730168046088670}
   m_Layer: 0
   m_Name: Stabbed Knife
   m_TagString: StabbedKnife
@@ -130,3 +131,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.42}
   serializedVersion: 2
   m_Radius: 0.12011449
+--- !u!114 &4150730168046088670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2714595111874835615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b9994f49179954fa2247a1c8af5bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
