@@ -42,15 +42,26 @@ public class GameplayController : MonoBehaviour
     public int TotalScore { get => totalScore; set => totalScore = value; }
     public int Fruits { get => fruits; set => fruits = value; }
 
+
+    public float throwCooldownTime = 0.1f;
+    bool cooldown = true;
+
     public void ThrowCurrentKnife()
     {
-        if (currentKnife == null) return;
+        if (currentKnife == null || !cooldown) return;
 
         // currentKnife.transform.parent = null;
         currentKnife.ThrowKnife(throwSpeed, knifeSpawnpoint, this);
         currentKnife = null;
 
         fsm.currentState.SendMessage("OnThrowKnife");
+
+        cooldown = true;
+        Invoke("RestoreCooldown", throwCooldownTime);
+    }
+
+    void RestoreCooldown(){
+        cooldown = true;
     }
 
     //Return false if has no level to run in
@@ -159,5 +170,10 @@ public class GameplayController : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene("Gameplay");
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

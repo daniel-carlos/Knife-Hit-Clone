@@ -85,7 +85,8 @@ public class TargetLog : MonoBehaviour
     {
         if (rotate)
         {
-            rb2.angularVelocity = gameplayLevel.angularSpeed * gameplayLevel.angularSpeedCurve.Evaluate(Time.time / gameplayLevel.angularSpeedSmooth % 1f);
+            // rb2.angularVelocity = gameplayLevel.angularSpeed * gameplayLevel.angularSpeedCurve.Evaluate(Time.time / gameplayLevel.angularSpeedSmooth % 1f);
+            rb2.angularVelocity = gameplayLevel.angularSpeed * gameplayLevel.angularSpeedCurve.Evaluate(transform.eulerAngles.z/360f) * gameplayLevel.angularSpeed;
         }
         else
         {

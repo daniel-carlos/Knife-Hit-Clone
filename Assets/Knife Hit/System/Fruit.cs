@@ -8,6 +8,8 @@ public class Fruit : MonoBehaviour
     public GameObject splittedFruitPrefab;
     private GameplayController gameplay;
 
+    // public AudioClip collectSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,8 @@ public class Fruit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Knife"){
+            // GetComponent<AudioSource>().PlayOneShot(collectSound);
+
             gameplay.CollectFruit(value);
 
             GameObject splitted = Instantiate(splittedFruitPrefab, transform.position, transform.rotation);

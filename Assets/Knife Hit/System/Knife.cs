@@ -13,6 +13,12 @@ public class Knife : MonoBehaviour
     private GameplayController gameplay;
     
 
+    [Header("SFX")]
+    public AudioSource audioSource;
+    public AudioClip throwingSound;
+    public AudioClip hitKnifeSound;
+
+
     [ContextMenu("Throw")]
     public void ThrowKnife(float throwSpeed, Transform spawnpoint, GameplayController gameplay = null)
     {
@@ -23,6 +29,8 @@ public class Knife : MonoBehaviour
         rb2.gravityScale = 0f;
         rb2.velocity = throwSpeed * Vector2.up;
         this.gameplay = gameplay;
+
+        audioSource.PlayOneShot(throwingSound);
     }
 
     // Start is called before the first frame update
@@ -57,7 +65,6 @@ public class Knife : MonoBehaviour
         rb2.gravityScale = 1f;
         rb2.velocity = Vector2.down + Vector2.right * Random.Range(-1f, 1f);
         rb2.angularVelocity = 360f;
-        Debug.Log(GetComponent<Collider2D>());
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -65,6 +72,7 @@ public class Knife : MonoBehaviour
         if (other.tag == "StabbedKnife")
         {
             Debug.Log($"I hitted another knife!", other.gameObject);
+            audioSource.PlayOneShot(hitKnifeSound);
             KillKnife();
             gameplay.OnDefeat();
         }
