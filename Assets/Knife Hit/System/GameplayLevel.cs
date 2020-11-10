@@ -20,6 +20,5 @@ public class GameplayLevel
 
     [Header("Knifes")]
     public int startingAmmo = 5;
-    public float[] startingKnifes;
-    public float[] startingFruits;
+    public int startingKnifes;
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,14 +33,49 @@ public class TargetLog : MonoBehaviour
 
     }
 
-    public void SetupStartingKnifes(float[] startingKnifes)
+    public void SetupStartingKnifes(int startingKnifes)
     {
-        for (int i = 0; i < startingKnifes.Length; i++)
+        //Listar os angulos disponíveis
+        List<float> availableAngles = new List<float>();
+        for (int i = 0; i < 360; i += 5)
+        {
+            availableAngles.Add(i);
+        }
+
+        float[] knifeLocations = new float[startingKnifes];
+        for (int i = 0; i < startingKnifes; i++)
+        {
+            int selectedAngle = Random.Range(0, availableAngles.Count);
+            knifeLocations[i] = availableAngles[selectedAngle];
+            availableAngles.RemoveAt(selectedAngle);
+        }
+
+        int fruitAmount = Random.Range(0, 3);
+        float[] fruitLocations = new float[fruitAmount];
+
+        for (int i = 0; i < fruitAmount; i++)
+        {
+            int selectedAngle = Random.Range(0, availableAngles.Count);
+            fruitLocations[i] = availableAngles[selectedAngle];
+            availableAngles.RemoveAt(selectedAngle);
+        }
+
+
+
+        for (int i = 0; i < knifeLocations.Length; i++)
         {
             GameObject startingStabbed = Instantiate(stabbedKnifePrefab,
                 transform.position + Vector3.down * logRadius,
                 Quaternion.identity, transform);
-            float angle = startingKnifes[i];
+            float angle = knifeLocations[i];
+            startingStabbed.transform.RotateAround(transform.position, Vector3.forward, angle);
+        }
+        for (int i = 0; i < fruitLocations.Length; i++)
+        {
+            GameObject startingStabbed = Instantiate(fruitPrefab,
+                transform.position + Vector3.down * fruitRadius,
+                Quaternion.identity, transform);
+            float angle = fruitLocations[i];
             startingStabbed.transform.RotateAround(transform.position, Vector3.forward, angle);
         }
     }
@@ -79,6 +113,8 @@ public class TargetLog : MonoBehaviour
                     Quaternion.LookRotation(-other.contacts[0].normal));
                 GameObject.Destroy(spark, sparkLifetime);
             }
+
+            GetComponent<Animator>().SetTrigger("hit");
         }
     }
 

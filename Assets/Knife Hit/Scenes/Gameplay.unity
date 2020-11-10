@@ -123,6 +123,110 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &41330199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 41330200}
+  - component: {fileID: 41330203}
+  - component: {fileID: 41330202}
+  - component: {fileID: 41330201}
+  m_Layer: 5
+  m_Name: Fruit Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &41330200
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41330199}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2067562422}
+  - {fileID: 1530533031}
+  m_Father: {fileID: 1459527000}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 214.68, y: 699.33}
+  m_SizeDelta: {x: -478.9948, y: -1443.979}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &41330201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41330199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 2
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &41330202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41330199}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &41330203
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41330199}
+  m_CullTransparentMesh: 0
 --- !u!1 &110662140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1285,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.91
+  orthographic size: 9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3039,7 +3143,7 @@ RectTransform:
   - {fileID: 1071559855}
   - {fileID: 2088903277}
   - {fileID: 1474393473}
-  - {fileID: 1530533031}
+  - {fileID: 41330200}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3278,9 +3382,9 @@ RectTransform:
   m_Father: {fileID: 1459527000}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -109, y: -59.700012}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 121.41998, y: -61.637024}
   m_SizeDelta: {x: 168.37164, y: 77.95535}
   m_Pivot: {x: 0.4999999, y: 0.5}
 --- !u!114 &1474393474
@@ -3337,7 +3441,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 200
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3409,13 +3513,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1459527000}
-  m_RootOrder: 4
+  m_Father: {fileID: 41330200}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -109, y: -140.90002}
-  m_SizeDelta: {x: 168.37164, y: 77.95535}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 144.90346, y: 76.02234}
   m_Pivot: {x: 0.4999999, y: 0.5}
 --- !u!114 &1530533032
 MonoBehaviour:
@@ -3437,7 +3541,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 99
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 836d813f02492ed4285a330719f4a34d, type: 2}
   m_sharedMaterial: {fileID: 4876459934679247379, guid: 836d813f02492ed4285a330719f4a34d, type: 2}
@@ -3480,7 +3584,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -4189,17 +4293,11 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     startingAmmo: 5
-    startingKnifes:
-    - 0
-    - 90
-    - 270
-    startingFruits:
-    - 345
-    - 300
+    startingKnifes: 0
   - levelLog: {fileID: 5220934991356661282, guid: c41e6633a0e98b345999dfd71baa2b84, type: 3}
     levelName: Level 2
     levelNumber: 2
-    angularSpeed: 90
+    angularSpeed: 45
     angularSpeedSmooth: 5
     angularSpeedCurve:
       serializedVersion: 2
@@ -4226,16 +4324,11 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     startingAmmo: 8
-    startingKnifes:
-    - 90
-    - 45
-    startingFruits:
-    - 0
-    - 180
+    startingKnifes: 2
   - levelLog: {fileID: 5220934991356661282, guid: c41e6633a0e98b345999dfd71baa2b84, type: 3}
     levelName: Level 3
     levelNumber: 3
-    angularSpeed: 90
+    angularSpeed: 50
     angularSpeedSmooth: 5
     angularSpeedCurve:
       serializedVersion: 2
@@ -4297,15 +4390,209 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    startingAmmo: 12
-    startingKnifes:
-    - 31
-    - 45
-    - 90
-    - 120
-    - 330
-    startingFruits:
-    - 180
+    startingAmmo: 8
+    startingKnifes: 4
+  - levelLog: {fileID: 5220934991356661282, guid: 6df262b7638242a40b24d3ef0c4a3b65, type: 3}
+    levelName: Level 4
+    levelNumber: 4
+    angularSpeed: 60
+    angularSpeedSmooth: 5
+    angularSpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: -4.6872997
+        outSlope: -4.6872997
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.10852189
+        value: 0.49132538
+        inSlope: -0.29831576
+        outSlope: -0.29831576
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.28751108
+        value: 1.2235107
+        inSlope: 0.73574376
+        outSlope: 0.73574376
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4758384
+        value: 0.7302475
+        inSlope: 0.7988248
+        outSlope: 0.7988248
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6750607
+        value: 1.5703341
+        inSlope: 1.2308142
+        outSlope: 1.2308142
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: -1.7552018
+        outSlope: -1.7552018
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    startingAmmo: 5
+    startingKnifes: 5
+  - levelLog: {fileID: 5220934991356661282, guid: 6df262b7638242a40b24d3ef0c4a3b65, type: 3}
+    levelName: Level 5
+    levelNumber: 5
+    angularSpeed: 60
+    angularSpeedSmooth: 4
+    angularSpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: -4.6872997
+        outSlope: -4.6872997
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.10852189
+        value: 0.49132538
+        inSlope: -2.4806263
+        outSlope: -2.4806263
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.31558883
+        value: 0.4345988
+        inSlope: 0.78548694
+        outSlope: 0.78548694
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4758384
+        value: 0.7302475
+        inSlope: 3.0308785
+        outSlope: 3.0308785
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6750607
+        value: 1.5703341
+        inSlope: 1.2308142
+        outSlope: 1.2308142
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: -1.7552018
+        outSlope: -1.7552018
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    startingAmmo: 8
+    startingKnifes: 6
+  - levelLog: {fileID: 5220934991356661282, guid: 6df262b7638242a40b24d3ef0c4a3b65, type: 3}
+    levelName: Level 6
+    levelNumber: 6
+    angularSpeed: 90
+    angularSpeedSmooth: 4
+    angularSpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: -0.14379674
+        outSlope: -0.14379674
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.10998674
+        value: 0.98418427
+        inSlope: -1.4084252
+        outSlope: -1.4084252
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.31558883
+        value: 0.4345988
+        inSlope: -0.4140635
+        outSlope: -0.4140635
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4758384
+        value: 0.7302475
+        inSlope: 1.8263967
+        outSlope: 1.8263967
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.90644497
+        value: 1.5087267
+        inSlope: -4.5430155
+        outSlope: -4.5430155
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.48954773
+        inSlope: -10.893898
+        outSlope: -10.893898
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    startingAmmo: 10
+    startingKnifes: 8
   throwSpeed: 12
   knifePrefab: {fileID: 847062522, guid: eac977b80cbce0c4fb1d6aa1045bde59, type: 3}
   knifeSpawnpoint: {fileID: 627694108}
@@ -4516,6 +4803,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961216813}
+  m_CullTransparentMesh: 0
+--- !u!1 &2067562421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2067562422}
+  - component: {fileID: 2067562424}
+  - component: {fileID: 2067562423}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2067562422
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067562421}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 41330200}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 94.33046, y: 63.47133}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2067562423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067562421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -5715569955038417951, guid: 2d3c9941f230e25478d9f11751ce3e3a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2067562424
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067562421}
   m_CullTransparentMesh: 0
 --- !u!1 &2088903276
 GameObject:

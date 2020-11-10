@@ -149,7 +149,6 @@ public class GameplayController : MonoBehaviour
         if (currentLog != null)
         {
             currentLog.SetupStartingKnifes(level.startingKnifes);
-            currentLog.SetupStartingFruits(level.startingFruits);
         }
         else
         {
