@@ -3,10 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Knife
-  - Log
-  - StabbedKnife
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -16,10 +13,10 @@ TagManager:
   - UI
   - 
   - 
-  - Knife
-  - Stabbed
-  - Log
-  - Fruit
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
