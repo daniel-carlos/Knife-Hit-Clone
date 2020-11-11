@@ -32,10 +32,10 @@ RectTransform:
   m_Father: {fileID: 7665415216526395668}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00060177, y: 20.098}
-  m_SizeDelta: {x: 162.95143, y: 130.20177}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.00060272217, y: 20.098022}
+  m_SizeDelta: {x: -0.0011749268, y: -40.196014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2132187620
 CanvasRenderer:
@@ -109,8 +109,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 36.98}
-  m_SizeDelta: {x: 0, y: 73.95814}
+  m_AnchoredPosition: {x: 0, y: 24.65}
+  m_SizeDelta: {x: 0, y: 49.29093}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5942002010029440711
 CanvasRenderer:
@@ -271,15 +271,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5482545476323165281, guid: 715fcb2dbf478df4db7e2763e953d343, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: a1fd5e106369e014eb72a3052cf2807f, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -308,10 +308,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.33931115, g: 0.5754717, b: 0.34646752, a: 1}
-    m_SelectedColor: {r: 0.43137258, g: 0.8196079, b: 0.4431373, a: 1}
+    m_SelectedColor: {r: 0.06941971, g: 0.9811321, b: 0.09704734, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -361,3 +361,4 @@ MonoBehaviour:
     name: 
     id: 
     cost: 0
+  aquired: 0

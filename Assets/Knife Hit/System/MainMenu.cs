@@ -5,18 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public GameObject aboutModal;
+
+    public void OpenAboutModal(){
+        aboutModal.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void CloseAboutModal(){
+        aboutModal.SetActive(false);
     }
-
+    
     public void Play(){
         SceneManager.LoadScene("Gameplay");
     }

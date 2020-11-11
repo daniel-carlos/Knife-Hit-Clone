@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 95319576}
     m_Modifications:
+    - target: {fileID: 2132187618, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20.098022
+      objectReference: {fileID: 0}
     - target: {fileID: 7665415216526395668, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -218,6 +222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knife Grid Item_8
       objectReference: {fileID: 0}
+    - target: {fileID: 8439369763436225312, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24.650024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
 --- !u!1 &95319575
@@ -233,6 +241,7 @@ GameObject:
   - component: {fileID: 95319577}
   - component: {fileID: 95319579}
   - component: {fileID: 95319580}
+  - component: {fileID: 95319581}
   m_Layer: 5
   m_Name: Shelf
   m_TagString: Untagged
@@ -247,7 +256,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95319575}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -262,12 +271,12 @@ RectTransform:
   - {fileID: 1942849702}
   - {fileID: 1382352863}
   m_Father: {fileID: 2114626137}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25.099854}
-  m_SizeDelta: {x: -145.99884, y: -786.4197}
+  m_AnchoredPosition: {x: 0, y: -38.047302}
+  m_SizeDelta: {x: -145.99884, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &95319577
 MonoBehaviour:
@@ -327,7 +336,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 200, y: 200}
+  m_CellSize: {x: 140, y: 140}
   m_Spacing: {x: 25, y: 25}
   m_Constraint: 1
   m_ConstraintCount: 3
@@ -349,6 +358,20 @@ MonoBehaviour:
   buyButtonText: {fileID: 1867892900}
   fruits: 0
   inventory: 
+--- !u!114 &95319581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95319575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!224 &107334716 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7665415216526395668, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
@@ -609,6 +632,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 95319576}
     m_Modifications:
+    - target: {fileID: 2132187618, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20.098022
+      objectReference: {fileID: 0}
     - target: {fileID: 7665415216526395668, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -697,6 +724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knife Grid Item_3
       objectReference: {fileID: 0}
+    - target: {fileID: 8439369763436225312, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24.650024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
 --- !u!224 &319503860 stripped
@@ -711,6 +742,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 95319576}
     m_Modifications:
+    - target: {fileID: 2132187618, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20.098022
+      objectReference: {fileID: 0}
     - target: {fileID: 7665415216526395668, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -799,6 +834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knife Grid Item_5
       objectReference: {fileID: 0}
+    - target: {fileID: 8439369763436225312, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24.650024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
 --- !u!114 &584493006 stripped
@@ -819,6 +858,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 95319576}
     m_Modifications:
+    - target: {fileID: 2132187618, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20.098022
+      objectReference: {fileID: 0}
     - target: {fileID: 7665415216526395668, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -906,6 +949,10 @@ PrefabInstance:
     - target: {fileID: 8122884136744790087, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
       propertyPath: m_Name
       value: Knife Grid Item_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439369763436225312, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24.650024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
@@ -1126,6 +1173,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 95319576}
     m_Modifications:
+    - target: {fileID: 2132187618, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20.098022
+      objectReference: {fileID: 0}
     - target: {fileID: 7665415216526395668, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1213,6 +1264,10 @@ PrefabInstance:
     - target: {fileID: 8122884136744790087, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
       propertyPath: m_Name
       value: Knife Grid Item_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439369763436225312, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24.650024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
@@ -1355,6 +1410,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 95319576}
     m_Modifications:
+    - target: {fileID: 2132187618, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20.098022
+      objectReference: {fileID: 0}
     - target: {fileID: 7665415216526395668, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1443,6 +1502,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knife Grid Item_7
       objectReference: {fileID: 0}
+    - target: {fileID: 8439369763436225312, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24.650024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
 --- !u!1001 &1493950134
@@ -1452,6 +1515,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 95319576}
     m_Modifications:
+    - target: {fileID: 2132187618, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20.098022
+      objectReference: {fileID: 0}
     - target: {fileID: 7665415216526395668, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1539,6 +1606,10 @@ PrefabInstance:
     - target: {fileID: 8122884136744790087, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
       propertyPath: m_Name
       value: Knife Grid Item_9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439369763436225312, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24.650024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
@@ -1708,12 +1779,12 @@ RectTransform:
   m_Children:
   - {fileID: 1867892899}
   m_Father: {fileID: 2114626137}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 226}
-  m_SizeDelta: {x: -465.1808, y: 149.87598}
+  m_AnchoredPosition: {x: 0, y: 170.40002}
+  m_SizeDelta: {x: -299.8245, y: 199.30197}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1530762140
 MonoBehaviour:
@@ -1897,6 +1968,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 95319576}
     m_Modifications:
+    - target: {fileID: 2132187618, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20.098022
+      objectReference: {fileID: 0}
     - target: {fileID: 7665415216526395668, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1985,6 +2060,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knife Grid Item_2
       objectReference: {fileID: 0}
+    - target: {fileID: 8439369763436225312, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24.650024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
 --- !u!224 &1679629735 stripped
@@ -2054,12 +2133,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Buy
-
-    $200'
+  m_text: Buy for $30
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 836d813f02492ed4285a330719f4a34d, type: 2}
+  m_sharedMaterial: {fileID: 4876459934679247379, guid: 836d813f02492ed4285a330719f4a34d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2083,10 +2160,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66.1
-  m_fontSizeBase: 24
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 110.29
   m_fontStyle: 0
@@ -2150,6 +2227,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 95319576}
     m_Modifications:
+    - target: {fileID: 2132187618, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20.098022
+      objectReference: {fileID: 0}
     - target: {fileID: 7665415216526395668, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2237,6 +2318,14 @@ PrefabInstance:
     - target: {fileID: 8122884136744790087, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
       propertyPath: m_Name
       value: Knife Grid Item_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439369763436225312, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439369763436225312, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24.650024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
@@ -2338,8 +2427,8 @@ RectTransform:
   - {fileID: 1495509141}
   - {fileID: 190597017}
   - {fileID: 1483023453}
-  - {fileID: 95319576}
   - {fileID: 1530762139}
+  - {fileID: 95319576}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2373,11 +2462,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[1].cost
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[2].cost
-      value: 23
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[2].id
@@ -2389,7 +2478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[3].cost
-      value: 55
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[0].name
@@ -2417,7 +2506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[4].cost
-      value: 80
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[5].name
@@ -2429,7 +2518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[5].cost
-      value: 100
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[6].name
@@ -2441,7 +2530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[6].cost
-      value: 125
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[7].name
@@ -2453,7 +2542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[7].cost
-      value: 155
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[8].name
@@ -2465,7 +2554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[8].cost
-      value: 220
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[9].name
@@ -2477,7 +2566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[9].cost
-      value: 666
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 9090864216275406367, guid: 68b35aebb18c1c64ea366fdb11de57f9, type: 3}
       propertyPath: knives.Array.data[10].name
@@ -3339,6 +3428,10 @@ PrefabInstance:
     - target: {fileID: 8122884136744790087, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
       propertyPath: m_Name
       value: Knife Grid Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439369763436225312, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24.650024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab151cf7e7da014a934c5046f93b02a, type: 3}

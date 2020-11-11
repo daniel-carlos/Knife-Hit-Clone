@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 755488988958961504}
   - component: {fileID: 755488988958961505}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 5223356209986548770}
   - component: {fileID: 8372199478145114677}
   - component: {fileID: 4150730168046088670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Stabbed Knife
   m_TagString: StabbedKnife
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}

@@ -19,7 +19,7 @@ public class State_Victory : FSMState
         {
             fsm.ChangeState(preparationState);
         }else{
-            Debug.Log("THE END");
+            gameplay.EndGame();
         }
     }
 

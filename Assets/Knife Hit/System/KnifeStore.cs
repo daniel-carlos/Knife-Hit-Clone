@@ -16,6 +16,17 @@ public class KnifeStore : MonoBehaviour
     KnifeSpriteRegister info;
     public string inventory;
 
+    private void Awake() {
+        if (PlayerPrefs.GetString("inventory") == "")
+        {
+            PlayerPrefs.SetString("inventory", "|kn_1|");
+        }
+        if (PlayerPrefs.GetString("knife") == "")
+        {
+            PlayerPrefs.SetString("knife", "kn_1");
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +38,7 @@ public class KnifeStore : MonoBehaviour
 
         balanceText.text = $"${fruits}";
 
-        if (PlayerPrefs.GetString("inventory") == "")
-        {
-            PlayerPrefs.SetString("inventory", "|kn_1|");
-        }
+        
 
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -51,11 +59,12 @@ public class KnifeStore : MonoBehaviour
         acquired = inventory.Contains(this.info.id);
         if (!acquired)
         {
-            buyButtonText.text = $"Buy\n{this.info.cost}";
-            buyButton.interactable = fruits >= this.info.cost || acquired;
+            buyButtonText.text = $"Buy For\n${this.info.cost}";
+            buyButton.interactable = fruits >= this.info.cost;
         }
         else
         {
+            buyButton.interactable = true;
             buyButtonText.text = "Select";
         }
     }

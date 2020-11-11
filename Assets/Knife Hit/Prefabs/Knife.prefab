@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 755488988958961504}
   - component: {fileID: 755488988958961505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 5046071080498889904}
   - component: {fileID: 6985770222371242275}
   - component: {fileID: 7832482838149499544}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Knife
   m_TagString: Knife
   m_Icon: {fileID: 0}
@@ -292,4 +292,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b9994f49179954fa2247a1c8af5bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knifeName: kn_3

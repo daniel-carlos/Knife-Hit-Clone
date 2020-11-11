@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5220934991356661282}
   - component: {fileID: 3509289141784196895}
   - component: {fileID: 116999768093948326}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Log
   m_TagString: Log
   m_Icon: {fileID: 0}
@@ -209,6 +209,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 73410bba099347145b6800eefeef8efc, type: 3}
       propertyPath: m_Name
       value: Entire Log
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 73410bba099347145b6800eefeef8efc, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73410bba099347145b6800eefeef8efc, type: 3}

@@ -22,6 +22,12 @@ public class GameplayController : MonoBehaviour
     [Header("Level")]
     public List<GameplayLevel> allLevels;
     private int currentLevel = 0;
+
+    internal void EndGame()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     private int currentLevelScore = 0; //Escores adqiridos no level atual
     private int fruits = 0; //Escores adqiridos no level atual
     private int totalScore = 0; //Total de score acumulado de todos os levels
